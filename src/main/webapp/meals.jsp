@@ -37,7 +37,7 @@
         <tr class="${mealTo.excess ? 'red' : 'green'}">
             <td>
                 <fmt:parseDate value="${mealTo.dateTime}" pattern="yyyy-MM-dd'T'HH:mm" var="parsedDateTime"/>
-                <fmt:formatDate pattern="dd.MM.yyyy HH:mm" value="${parsedDateTime}"/>
+                <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${parsedDateTime}"/>
             </td>
             <td>${mealTo.description}</td>
             <td>${mealTo.calories}</td>
