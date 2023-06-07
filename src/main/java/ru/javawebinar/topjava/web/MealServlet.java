@@ -17,9 +17,7 @@ public class MealServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         log.debug("forward to meals");
-        request.setAttribute("mealToList", MealsUtil.getMealToList());
+        request.setAttribute("mealToList", MealsUtil.getMealToList(MealsUtil.meals, MealsUtil.CALORIES_PER_DAY));
         request.getRequestDispatcher("/meals.jsp").forward(request, response);
-//      response.sendRedirect("meals.jsp");
-
     }
 }
