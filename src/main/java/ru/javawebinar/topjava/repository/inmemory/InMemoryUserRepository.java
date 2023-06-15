@@ -13,6 +13,8 @@ import java.util.List;
 public class InMemoryUserRepository implements UserRepository {
     private static final Logger log = LoggerFactory.getLogger(InMemoryUserRepository.class);
 
+    public static int userID;
+
     @Override
     public boolean delete(int id) {
         log.info("delete {}", id);
